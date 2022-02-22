@@ -38,20 +38,36 @@ exports.getName = (name) => {
         mysql.getConnection((error, conn) => {
 	
             if (error) { return error.message };
+	    
 	        var sql = "SELECT his_ID, his_cpf, his_nome FROM score_historico WHERE his_nome LIKE '%"+name+"%';";
+		
 		return new Promise((resolve, reject) => {
+		
+		
 			exec.exec( sql, conn,(err, rows ) => {
+			
+			
 			if (err) {
+			
 				reject(err);
+				
 				}
+				
 				resolve(rows);
+				
 			});
+			
 		});
+		
 	});
+	
     } catch (error) {
+    
       return { error: error.message };
       
+      
     }
+    
     
 }
 
