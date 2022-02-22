@@ -24,13 +24,15 @@ index.js
 	    
  
 
-A promise do nodejs, javascript, teoricamente diz que algum procedimento que você executou assíncrono, deve ter seu resultado resolvido ou rejeitado. Aplicando esse conceito em cima de outro conceito que é "exports de função" do node js, conectando ao banco de dados modelo Pool do próprio nodejs, descobri que a premise funcionando da seguinte forma, vamos para exemplo de código que acredito fique mais facil de entender.
+A promise do nodejs, javascript, teoricamente diz que algum procedimento que você executou assíncrono, deve ter seu resultado resolvido ou rejeitado. Aplicando esse conceito em cima de outro conceito que é "exports de função" do node js, conectando ao banco de dados modelo Pool do próprio nodejs, descobri que a Promise esta funcionando da seguinte forma, vamos para exemplo de código que acredito fique mais facil de entender.
 
 Espero que tenha sido didático, dentro do possível. Fiquem à vontade para discordar.
 
 ASSIM NAO FUNCIONA:
-Entendo que não funciona, porque a conexão 'POOL" função ( mysql.getConnection, "conn") criada pelo método getConnection, O "state" não é reconhecida pela promise quando seu objeto é criado , o BUG, na minha interpretação esta que , a mesma, deveria reconhecer automaticamente a conexão ,"conn",  criada ,  já que procedimento foi executado com sucesso e está dentro de modules exports, "container", com state ativo. 
-Também vale ressaltar que a promise foi criada para "resolve" retorno assíncrono do 'result' da função "exec" e não da conexão junto.
+Entendo que não funciona, porque a conexão 'POOL" função ( mysql.getConnection, "conn") criada pelo método getConnection, O "state" não é reconhecida pela Promise quando seu objeto é criado , o BUG. Na minha interpretação a Promise deveria reconhecer automaticamente a conexão ,"conn",  criada ,  já que procedimento foi executado com sucesso e está dentro de modules exports, "container", com state ativo. 
+Também vale ressaltar que a Promise foi criada para resolver o retorno assíncrono do 'resultSet' da função "exec" e não da conexão ao banco de dados.
+
+# Codigo
 
 const express = require('express');
 
@@ -80,6 +82,9 @@ exports.getName = (name) => {
 
 
 ASSIM FUNCIONA: pois a promise consegue manter "state" da função mysql.getConnection, "conn".
+
+
+#Codigo
 
 const express = require('express');
 
