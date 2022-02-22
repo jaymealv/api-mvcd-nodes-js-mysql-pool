@@ -25,8 +25,11 @@ ASSIM NAO FUNCIONA: Entendo que não funciona, porque a conexão 'POOL" função
 Também vale ressaltar que a promise foi criada para "resolve" retorno assíncrono do 'result' da função "exec" e não da conexão junto.
 
 const express = require('express');
+
 const exec = require('../db/mysql');
+
 const mysql = require('../db/mysql').pool;
+
 exports.getName = (name) => {
     try {
         mysql.getConnection((error, conn) => {
