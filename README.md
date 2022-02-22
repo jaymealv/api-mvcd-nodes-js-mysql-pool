@@ -1,7 +1,6 @@
 # api-mvcd-nodes-js-mysql-pool
 
 Estudo de caso: Promise do Nodejs
-
 Conclusão : poderia ser mais intuitiva/simples, talvez na proxima versão n.x.x.
 
 Do meu ponto de vista um Bug, Será?
