@@ -8,13 +8,21 @@ Do meu ponto de vista um Bug, Será?
 
 criando um MVC para teste de API, me deparei com seguinte problema
 Criei uma Estrutura metodos(MVCD), "D  minha invenção. rsrs",  para obter um resultSet do BD.
+
 index.js
+
   --routes
+  
 	--- controllers
+	
         --- models
+	
 	--- db
+	
 	    ..... conection
+	    
 	    ..... query
+	    
  
 
 A promise do nodejs, javascript, teoricamente diz que algum procedimento que você executou assíncrono, deve ter seu resultado resolvido ou rejeitado. Aplicando esse conceito em cima de outro conceito que é "exports de função" do node js, conectando ao banco de dados modelo Pool do próprio nodejs, descobri que a premise funcionando da seguinte forma, vamos para exemplo de código que acredito fique mais facil de entender.
