@@ -1,14 +1,26 @@
 # api-mvcd-nodes-js-mysql-pool
 
-Estudo de caso: Promise do Nodejs
-Conclusão : poderia ser mais intuitiva/simples, talvez na proxima versão n.x.x.
-
+Não esqueça de ir no script 
 Acesso://localhost:3000/history/maria
 
 Linguagem:
 	apache
 	nodesjs
 	mysql
+
+
+
+OBSERVAÇÕES:
+Não esqueça de preencher no script, /nodes/api/nodemon.json, as configurações do Database, table, user, password, port.
+ 
+
+Não esqueça de script: /nodes/api/models/history-consult.js e colocar seu Select  <tabela>, <campo> 
+line 14: 
+	var sql = "SELECT * FROM <tabela> WHERE <campo> LIKE '%"+name+"%';";
+
+Estudo de caso: Promise do Nodejs
+Conclusão : poderia ser mais intuitiva/simples, talvez na proxima versão n.x.x.
+
 
 Do meu ponto de vista um Bug, Será?
 

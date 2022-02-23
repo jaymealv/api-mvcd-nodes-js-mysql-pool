@@ -11,7 +11,7 @@ exports.getName = (name) => {
             mysql.getConnection((error, conn) => {
                 if (error) { return error.message };                
         
-                var sql = "SELECT * FROM <sua-tabela> WHERE <campo-descricao> LIKE '%"+name+"%';";
+                var sql = "SELECT * FROM <tabela> WHERE <campo> LIKE '%"+name+"%';";
                 exec.exec( sql, conn,(err, rows ) => {
                 if (err) {
                     reject(err);
