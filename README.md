@@ -3,6 +3,13 @@
 Estudo de caso: Promise do Nodejs
 Conclusão : poderia ser mais intuitiva/simples, talvez na proxima versão n.x.x.
 
+Acesso://localhost:3000/history/maria
+
+Linguagem:
+	apache
+	nodesjs
+	mysql
+
 Do meu ponto de vista um Bug, Será?
 
 criando um MVC para teste de API, me deparei com seguinte problema
