@@ -2,8 +2,8 @@
     "env" : {
         "MYSQL_HOST": "localhost",
         "MYSQL_PORT": 3306,
-        "MYSQL_DATABASE": "jgreenco_score",
-        "MYSQL_USER": "root",
-        "MYSQL_PASSWORD": "jjagf"
+        "MYSQL_DATABASE": "seu banco",
+        "MYSQL_USER": "",
+        "MYSQL_PASSWORD": ""
     }
 }

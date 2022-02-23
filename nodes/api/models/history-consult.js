@@ -11,7 +11,7 @@ exports.getName = (name) => {
             mysql.getConnection((error, conn) => {
                 if (error) { return error.message };                
         
-                var sql = "SELECT his_ID, his_cpf, his_nome FROM score_historico WHERE his_nome LIKE '%"+name+"%';";
+                var sql = "SELECT * FROM <sua-tabela> WHERE <campo-descricao> LIKE '%"+name+"%';";
                 exec.exec( sql, conn,(err, rows ) => {
                 if (err) {
                     reject(err);

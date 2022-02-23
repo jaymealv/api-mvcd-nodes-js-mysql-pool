@@ -9,9 +9,6 @@ var pool = mysql.createPool({
     "password": process.env.MYSQL_PASSWORD,
     "connectionLimit" : 1000    
 });
-/*
-console.log ('12 Name: ' +process.env.MYSQL_DATABASE);
-*/
 
 exports.exec = (query, conn, params=[]) => {
 //    console.log("2222 sql: "+query)        
