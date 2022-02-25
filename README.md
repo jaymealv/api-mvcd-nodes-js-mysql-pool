@@ -3,7 +3,7 @@
 Não esqueça de ir no script 
 Acesso://localhost:3000/history/maria
 
-Linguagem:
+tecnologias:
 	apache
 	nodesjs
 	mysql
